@@ -2,7 +2,6 @@
 include('config/conn_cme.php');
 
 
-
 //get messages
 $sql = 'SELECT * FROM blog_post ORDER BY date';
 
@@ -11,10 +10,15 @@ $result = mysqli_query($conn, $sql);
 
 $blogs = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+$ip_address = $_SERVER["REMOTE_ADDR"];
+
+$sql2 = "INSERT INTO ip_store(ipadd) VALUES('$ip_address)";
+mysqli_query($conn, $sql2);
+
+	
 
 mysqli_free_result($result);
 mysqli_close($conn);
-
 
 ?>
 
@@ -23,6 +27,15 @@ mysqli_close($conn);
 	<head>
 		<meta charset="utf-8">
 
+		<style>
+			body {
+				position: relative;
+				min-height: 100vh;
+			}
+		
+		
+		
+		</style>
 	</head>
 <?php include('Header.php'); ?>
 
@@ -88,8 +101,8 @@ mysqli_close($conn);
 
 			
 		<?php } ?>
+		<?php include('Footer.php'); ?>
 			</sub>
 		</footer>
-	
 	</body>
 </html>

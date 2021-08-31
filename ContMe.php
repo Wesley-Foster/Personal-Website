@@ -51,11 +51,18 @@ if(isset($_POST['submit'])){
 <html>
 	<head>
 		<meta charset="utf-8">
+	<style>
+		body {
+			position: relative;
+			min-height: 100vh;
+		}
+
+	</style>
 	</head>
 <?php include('Header.php'); ?>		
 		
 		
-			
+<body>			
 		<br>
 		<section class="holder" style="padding-left: 100px; padding-right:100px; color: #AAABB8;">
 			<form class="white" action="ContMe.php" method="POST" style="max-width: 560px; margin: 20px auto; padding: 20px;">
@@ -80,13 +87,16 @@ if(isset($_POST['submit'])){
 				
 			</form>
 		</section>
-	
+		<br />
+		<br />
+		<br />
+		<br />
 			
 
 		
 		
 		<footer>
-			<a href="login.php" style="margin-left: 950px">login</a>
+		<?php include('Footer.php')?>
 		</footer>
 	
 	</body>

@@ -5,20 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 </head>
-		<foot>
-			<fnav>
-				<div class="top-row-footer">
-					<a class="top-row-footer" href="login.php">Login</a>
-				</div>
-				<div class="2nd-row-footer">
-				</div>
-			</fnav>
+
+<div class="footer-hold">
+	<div class="footer">
+		<a href="login.php">Admin Login</a>
+		<a href="loginforward.php">Admin Navigation</a>
 
 
 
+	</div>
+</div>
 
 
 
-
-
-		</foot>
