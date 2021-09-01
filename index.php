@@ -26,7 +26,7 @@ mysqli_close($conn);
 <html>
 	<head>
 		<meta charset="utf-8">
-
+		<title>Wesley F - Home</title>
 		<style>
 			body {
 				position: relative;
@@ -47,7 +47,7 @@ mysqli_close($conn);
 				
 			<img src="Wesleyfoster.jpg" alt="Error: Photo not found" width="500" style="float: left; padding-right: 12px;">
 			
-			<p style="color: #AAABB8;"><big>  Throughout my life I have enjoyed creating things. Initially I picked up art as a hobby in elementary school, but soon found creating code and programs was also enjoyable and aligned with my intrest with technology and computers. My earliest experience with code was when I took a coding class over the summer when I was 13 that involved making a mod for Minecraft with java over a week. Unfortunately now I don't have video or access to the code, but the experience set me off to start to learn to code. My current experience with code has been a machine learning class with python, and making various projects with python. If you are interested you can click on the "My Projects" tab to see more of my programs/code. I have also built a few computers from memory and have a basis of knowledge for what each part of a computer does.  </big></p>
+			<p style="color: #AAABB8;"><big>  Throughout my life I have enjoyed creating things. Initially I picked up art as a hobby in elementary school, but soon found creating code and programs was also enjoyable and aligned with my intrest with technology and computers. My earliest experience with code was when my step-grandfather and I made a robot together in my basement. With my intrest started in programing and computers I decided to take a coding class where I would learn about java syntax while moding minecraft Unfortunately now I don't have pictures or access to the code, but the experience set me off to start to learn to code. Currently I have done a few projects with various languages, such as a random password generator with python and this website using PHP, to learn more visit "MY Projects.""</big></p>
 			<br>
 			<p style="color: #AAABB8;">"Wesley is the type of fellow to do the 300M hurdles despite never running the 300M hurdles."-Josh Abercrombie </p>
 			<p style="color: #AAABB8;">"Wesley is the type of fellow to dip his toe in the toilet to check the temperature before sitting down."-Aaron Evans* </p>
@@ -85,7 +85,7 @@ mysqli_close($conn);
 			<?php foreach($blogs as $blog){
 				$echotitle = htmlspecialchars($blog['title']);
 				$echodate = $blog['date'];
-				$echotext = htmlspecialchars($blog['text'])
+				$echotext = $blog['text'];
 				 ?>
 				
 				<h1 style="color: #AAABB8; margin: 20px;"><?php echo $echotitle;?></h1>

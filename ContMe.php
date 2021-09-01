@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
 		
 		// save and check
 		if(mysqli_query($conn, $sql)){
-			header('Location: index.php');
+			header('Location: msgsent.php');
 
 			mysqli_close($conn);
 		} else{
@@ -51,6 +51,7 @@ if(isset($_POST['submit'])){
 <html>
 	<head>
 		<meta charset="utf-8">
+		<title>Wesley F - Contact Me</title>
 	<style>
 		body {
 			position: relative;
@@ -62,22 +63,22 @@ if(isset($_POST['submit'])){
 <?php include('Header.php'); ?>		
 		
 		
-<body>			
-		<br>
+<body>	
+	<h2 style="color: #AAABB8; text-align: center; padding-top: 12px; text-decoration: underline;">Send Me A Message!</h2>
 		<section class="holder" style="padding-left: 100px; padding-right:100px; color: #AAABB8;">
 			<form class="white" action="ContMe.php" method="POST" style="max-width: 560px; margin: 20px auto; padding: 20px;">
 				<label >Your Name:</label>
-				<input type="text" name="name">
+				<input type="text" name="name" style="background-color: #B6B0CE;">
 				<br>
 				<div  style="color: #9C0002"><?php echo $errors['name']; ?></div>
 				<br>
 				<label>Message Subject:</label>
-				<input type="text" name="subject">
+				<input type="text" name="subject" style="background-color: #B6B0CE">
 				<br>
 				<div style="color: #9C0002;"><?php echo $errors['subject']; ?></div>
 				<br>
 				<label >Message:</label>
-				<textarea name="msg" id="msg" rows="20" cols="80"></textarea>
+				<textarea name="msg" id="msg" rows="20" cols="80" style="background-color: #B6B0CE;"></textarea>
 				<div  style="color: #9C0002;"><?php echo $errors['msg']; ?></div>
 				<br>
 				
